@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&display=swap" rel="stylesheet">
+  <title>p16_portfoli_final</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    /* TYPOGRAPHY */
+    .archivo-uniquifier {
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    }
+    .archivo-uniquifier{
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 125;
+    }
+    h1{
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-stretch: 125%;
+    font-variation-settings: "wdth" 125;
+    font-style: normal;
+    text-align: left;
+    line-height: 0.97;
+    font-size: 4.45em;
+    color: #04081C;
+    }
+    h2{
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-stretch: 125%;
+    font-variation-settings: "wdth" 125;
+    font-style: normal;
+    text-align: left;
+    font-size: 1.9em;
+    color: #04081C;
+    }
+    h3{
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-variation-settings: "wdth" 100;
+    font-style: normal;
+    text-align: left;
+    font-size: 1em;
+    color: #04081C;
+    line-height: 0.8;
+    }
+    h4{
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-variation-settings: "wdth" 100;
+    font-style: normal;
+    text-align: left;
+    font-size: 1em;
+    color: #04081C;
+    }
+    h5{
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-variation-settings: "wdth" 100;
+    font-style: normal;
+    text-align: left;
+    font-size: 1em;
+    color: #04081C;
+    }
+    h6{
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-variation-settings: "wdth" 100;
+    font-style: normal;
+    text-align: left;
+    font-size: 1.5em;
+    color: #E6E2E2;
+    }
+    ul{
+    font-family: "Archivo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-variation-settings: "wdth" 100;
+    font-style: normal;
+    text-align: left;
+    line-height: 1.2;
+    font-size: 1em;
+    }
+    .container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    }
+    .video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    }
+    video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    }
+    .image-overlay{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 75%;
+    }
+    .text-container{
+    margin-left: 2.5%;
+    margin-top: 1.5%;
+    }
+    .footer h3, .footer h4, .footer h5{
+    margin: 12px;
+    padding: 30px;
+    color: #E6E2E2;
+    }
+    .main {
+    position: absolute;
+    top: 7%;
+    right: 0%;
+    width: 30%;
+    height: 80%;
+    background-color: #3a0744;
+    color: #E6E2E2;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s;
+    }
+    .main:hover {
+    background-color: #5e0b6e;
+    color: #E6E2E2;
+    }
+    .main h6{
+      margin-left: 36px;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+    .main ul{
+      margin-left: auto;
+      list-style: none;
+    }
+    .main ul li {
+      margin-bottom: 2px;
+     }
+    .main ul li a {
+    text-decoration: none;
+    color: #E6E2E2;
+    }
+    .footer {
+    position: relative;
+    top: 33%;
+    width: 100%;
+    height: 15%;
+    background-color: #0e0111;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    }
+    .link{
+    text-decoration: none; 
+    color: #E6E2E2;
+    opacity: 1; 
+    transition: opacity 0.6s ease; 
+    }
+    .link:hover {
+    opacity: 0.35; 
+    }
+    .insta{
+    text-decoration: none; 
+    color: #04081C;
+    opacity: 1; 
+    transition: opacity 0.6s ease; 
+    }
+    .insta:hover {
+    opacity: 0.35; 
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+      .video-container {
+        height: auto;
+      }
+      .main {
+        position: static;
+        width: 90%;
+        margin: 20px 0;
+      }
+      .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sección de video -->
+    <div class="video-container">
+      <video src="video/p16_f4hTBG8X.mp4" autoplay muted loop></video>
+      <img class="image-overlay" src="Img/figuras 4.png" alt="Imagen sobre el vídeo">
+    </div>
+    <div class="text-container">
+      <h1>CARMEN<br>SÁNCHEZ</h1>
+      <h2><a href="https://www.instagram.com/carmenssch.design/" class="insta">@carmenssch.design</a></h2>
+    </div>
+    <div class="main">
+      <h6>Bloc 01</h6>
+      <ul>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p1/" class="link">p1_localhost</a></li>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p2/" class="link">p2_imatges_video_audio</a></li>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p3/" class="link">p3_html i css</a></li>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p4/" class="link">p4_interpretació_css</a></li>
+        <li><a href="https://www.figma.com/design/owBY1ntfqfC8jHiDqwpPAA/p4?node-id=0-1&t=KH3jVtIASwKm48Fv-1" class="link">p5_seleccio_interpretació_disseny_en_html_&_css</a></li>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p6s/" class="link">p6_disseny_interpretat_html_&_css</a></li>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p7/" class="link">p7_portfoli B1</a></li>
+      </ul>
+      <h6>Bloc 02</h6>
+      <ul>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p8/" class="link">p8_flexbox</a></li>
+        <li><a href="https://www.lafabrica.com/" class="link">p9_flexbox_diari</a></li>
+        <li><a href="https://www.figma.com/design/4uJamCEby6eOvfh80MI1e8/p7?node-id=0-1&m=dev&t=H5V702jkzi1WKkQI-1" class="link">p10_flexbox_bio i obra</a></li>
+        <li><a href="https://www.figma.com/design/4uJamCEby6eOvfh80MI1e8/p7?node-id=2120-2&t=Kt80niv6d3CsHjEP-1" class="link">p11_Dibuixem figma card</a></li>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p12_card_mediaqueries/" class="link">p12_card_mediaqueries</a></li>
+      </ul>
+      <h6>Bloc 03</h6>
+      <ul>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p13_grid_objects/" class="link">p13_grids</a></li>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p14_juliol2025/" class="link">p14_grid_calendar</a></li>
+        <li><a href="https://carmensanchezsanchez.github.io/2DG_p15_portada_calendari/" class="link">p15_portada_calendari</a></li>
+      </ul>
+    </div>
+    <div class="footer">
+      <h3>2024 - 2025</h3>
+      <h4><a href="https://aules.edu.gva.es/iseacv/course/view.php?id=14717" class="link">Sistemes de representació avançats</a></h4>
+      <h5>2º Disseny Gràfic</h5>
+    </div>
+  </div>
+</body>
+</html>
